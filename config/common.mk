@@ -37,7 +37,7 @@ PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/etc/permissions/privapp-permissions-aex.xml:system/etc/permissions/privapp-permissions-aex.xml
 
 DEVICE_PACKAGE_OVERLAYS += \
-    vendor/aosp/overlay/common \
+    vendor/aosp/overlay/common
 
 # Custom AEX packages
 ifeq ($(TARGET_USE_GCAM),true)
@@ -50,7 +50,7 @@ PRODUCT_PACKAGES += \
     LiveWallpapers \
     LiveWallpapersPicker \
     Stk \
-    Phonograph \ 
+    Phonograph \
     WallpaperPickerGoogle \
     Recorder \
     WeatherClient
