@@ -32,17 +32,12 @@ endif
 # Bootanimation
 $(call inherit-product, vendor/aosp/config/bootanimation.mk)
 
-# Hidden API whitelist
-PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/etc/permissions/aex-hiddenapi-package-whitelist.xml:system/etc/permissions/aex-hiddenapi-package-whitelist.xml
-
 # priv-app permissions
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/etc/permissions/privapp-permissions-aex.xml:system/etc/permissions/privapp-permissions-aex.xml
 
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/aosp/overlay/common \
-    vendor/aosp/overlay/dictionaries
 
 # Custom AEX packages
 ifeq ($(TARGET_USE_GCAM),true)
@@ -50,23 +45,13 @@ PRODUCT_PACKAGES += \
     Gcam
 endif
 
-ifeq ($(TARGET_USE_JELLY),true)
-PRODUCT_PACKAGES += \
-    Jelly
-endif
-
 PRODUCT_PACKAGES += \
     Terminal \
-    LatinIME \
     LiveWallpapers \
     LiveWallpapersPicker \
     Stk \
-    ViaBrowser \
-    AEXPapers \
-    RetroMusicPlayer \
+    Phonograph \ 
     WallpaperPickerGoogle \
-    MarkupGoogle \
-    WellbeingPrebuilt \
     Recorder \
     WeatherClient
 
@@ -142,22 +127,6 @@ PRODUCT_PACKAGES += \
     QSTilesJustIcons \
     QStilesCircleOutline \
     QSTilesCircleGradient
-
-
-# Markup libs
-PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
-    vendor/aosp/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
-
-# Pixel sysconfig
-PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml
-
-# Turbo
-PRODUCT_PACKAGES += \
-    Turbo \
-    turbo.xml \
-    privapp-permissions-turbo.xml
 
 # Fonts
 PRODUCT_PACKAGES += \
