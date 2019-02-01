@@ -118,9 +118,11 @@ PRODUCT_PACKAGES += \
     ContactsThemeBlack \
     DialerThemeBlack \
     FilesThemeBlack \
+    WellbeingBlackTheme \
     ContactsThemeDark \
     DialerThemeDark \
     FilesThemeDark \
+    WellbeingDarkTheme \
     ContactsThemeChocolate \
     DialerThemeChocolate \
     FilesThemeChocolate \
